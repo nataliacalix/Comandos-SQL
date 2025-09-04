@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos SQL Explicados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            color: #33ff00;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #33ff00;
+        }
+        h2 {
+            color: #33ff00;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        .command {
+            background-color: #000000;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .command code {
+            color: #09ff00;
+            font-weight: bold;
+        }
+        .explanation {
+            margin-top: 5px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Comandos SQL Explicados</h1>
+
+    <p>Aqui estão alguns dos comandos SQL mais comuns, com uma breve explicação de cada um.</p>
+
+    <h2>1. <span class="command">CREATE DATABASE</span></h2>
+    <div class="explanation">
+        O comando <code>CREATE DATABASE</code> é usado para criar um novo banco de dados.
+        <pre><code>CREATE DATABASE nome_do_banco;</code></pre>
+    </div>
+
+    <h2>2. <span class="command">USE</span></h2>
+    <div class="explanation">
+        O comando <code>USE</code> seleciona qual banco de dados você deseja usar em sua sessão atual.
+        <pre><code>USE nome_do_banco;</code></pre>
+    </div>
+
+    <h2>3. <span class="command">CREATE TABLE</span></h2>
+    <div class="explanation">
+        O comando <code>CREATE TABLE</code> é usado para criar uma nova tabela em um banco de dados.
+        <pre><code>CREATE TABLE nome_da_tabela (
+            id INT AUTO_INCREMENT,
+            nome VARCHAR(100),
+            idade INT,
+            PRIMARY KEY(id)
+        );</code></pre>
+    </div>
+
+    <h2>4. <span class="command">ALTER TABLE</span></h2>
+    <div class="explanation">
+        O comando <code>ALTER TABLE</code> é usado para modificar a estrutura de uma tabela existente, como adicionar ou remover colunas.
+        <pre><code>ALTER TABLE nome_da_tabela ADD coluna_exemplo VARCHAR(255);</code></pre>
+    </div>
+
+    <h2>5. <span class="command">DROP COLUMN</span></h2>
+    <div class="explanation">
+        O comando <code>DROP COLUMN</code> é usado para remover uma coluna de uma tabela existente.
+        <pre><code>ALTER TABLE nome_da_tabela DROP COLUMN nome_da_coluna;</code></pre>
+    </div>
+
+    <h2>6. <span class="command">DESCRIBE</span></h2>
+    <div class="explanation">
+        O comando <code>DESCRIBE</code> fornece a estrutura de uma tabela, mostrando os nomes das colunas, tipos de dados e outras informações.
+        <pre><code>DESCRIBE nome_da_tabela;</code></pre>
+    </div>
+
+    <h2>7. <span class="command">INSERT INTO</span></h2>
+    <div class="explanation">
+        O comando <code>INSERT INTO</code> é usado para inserir novos dados em uma tabela.
+        <pre><code>INSERT INTO nome_da_tabela (nome, idade) VALUES ('João', 25);</code></pre>
+    </div>
+
+    <h2>8. <span class="command">UPDATE</span></h2>
+    <div class="explanation">
+        O comando <code>UPDATE</code> é usado para modificar dados existentes em uma tabela.
+        <pre><code>UPDATE nome_da_tabela SET idade = 26 WHERE nome = 'João';</code></pre>
+    </div>
+
+    <h2>9. <span class="command">DELETE FROM</span></h2>
+    <div class="explanation">
+        O comando <code>DELETE FROM</code> é usado para excluir dados de uma tabela.
+        <pre><code>DELETE FROM nome_da_tabela WHERE nome = 'João';</code></pre>
+    </div>
+
+    <h2>10. <span class="command">WHERE</span></h2>
+    <div class="explanation">
+        O comando <code>WHERE</code> é usado para filtrar registros com base em uma condição.
+        <pre><code>SELECT * FROM nome_da_tabela WHERE idade > 20;</code></pre>
+    </div>
+
+    <h2>11. <span class="command">AND</span></h2>
+    <div class="explanation">
+        O comando <code>AND</code> é usado para combinar múltiplas condições no <code>WHERE</code> e retornar resultados onde ambas as condições sejam verdadeiras.
+        <pre><code>SELECT * FROM nome_da_tabela WHERE idade > 20 AND nome = 'João';</code></pre>
+    </div>
+
+    <h2>12. <span class="command">OR</span></h2>
+    <div class="explanation">
+        O comando <code>OR</code> é usado para combinar condições e retornar resultados onde pelo menos uma das condições seja verdadeira.
+        <pre><code>SELECT * FROM nome_da_tabela WHERE idade > 20 OR nome = 'João';</code></pre>
+    </div>
+
+    <h2>13. <span class="command">NOT</span></h2>
+    <div class="explanation">
+        O comando <code>NOT</code> é usado para negar uma condição.
+        <pre><code>SELECT * FROM nome_da_tabela WHERE NOT idade > 20;</code></pre>
+    </div>
+
+    <h2>14. <span class="command">LIKE</span></h2>
+    <div class="explanation">
+        O comando <code>LIKE</code> é usado para procurar por padrões em colunas de texto.
+        <pre><code>SELECT * FROM nome_da_tabela WHERE nome LIKE 'Jo%';</code></pre>
+    </div>
+
+    <h2>15. <span class="command">SELECT</span></h2>
+    <div class="explanation">
+        O comando <code>SELECT</code> é usado para consultar dados de uma tabela.
+        <pre><code>SELECT nome, idade FROM nome_da_tabela;</code></pre>
+    </div>
+
+    <h2>16. <span class="command">JOIN</span></h2>
+    <div class="explanation">
+        O comando <code>JOIN</code> é usado para combinar dados de duas ou mais tabelas com base em uma condição comum.
+        <pre><code>SELECT * FROM tabela1 JOIN tabela2 ON tabela1.id = tabela2.id;</code></pre>
+    </div>
+
+</body>
+</html>
